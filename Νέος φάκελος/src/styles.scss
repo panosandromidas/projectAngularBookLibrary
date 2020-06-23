@@ -1,0 +1,21 @@
+.instructions {
+  padding: 10px;
+  text-align: justify;
+  opacity: 0.8;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.tasks {
+  color: rgb(24, 122, 57);
+}
+
+.extras {
+  color: rgb(84, 84, 224);
+}
+
+body {
+  background-color: rgb(201, 199, 199);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h3>Books</h3>
+    </div>
+    <div class="col-sm">
+      <button (click)="onCallBookPopup()">Add</button>
+    </div>
+    <div class="col-sm">
+
+    </div>
+    <hr>
+
+
+  </div>
+  <hr>
+
+
+  <div class="row">
+    <!-- <ul  >
+      <li >
+          {{book | json}}
+      </li>
+      <hr>
+    </ul> -->
+    <table>
+      <thead>
+        <th>Code</th>
+
+        <th>Title</th>
+        <th>Author</th>
+        <th>Published</th>
+        <th>Pages</th>
+        <th>Website</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books; let i = index">
+          <td >{{book.code}}</td>
+          <td>{{book.title | json}}</td>
+          <td>{{book.author | json}}</td>
+          <td>{{book.published | json}}</td>
+          <td>{{book.pages | json}}</td>
+          <td>{{book.website | json}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+  </div>
+
+
+
+
+</div>
+

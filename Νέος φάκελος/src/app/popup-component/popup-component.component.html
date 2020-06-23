@@ -1,0 +1,48 @@
+
+  <button (click)="onClose()" required>x</button>
+  <hr>
+  <form [formGroup]="formBook">
+    <div class="group">
+      <label>Code </label>
+      <input type="text"   class="form-control"  formControlName="code" />
+
+      <!-- <span *ngIf="!formBook.get('email').valid && formBook.get('code').touched">Please enter a code!</span> -->
+    </div>
+
+    <div class="group">
+      <label>Title</label>
+      <input type="text" class="form-control" maxlength="49"  formControlName="title" required />
+      <!-- <span *ngIf="!formBook.get('password').valid && formBook.get('title').touched">Please enter a title!</span> -->
+    </div>
+
+    <div class="group">
+      <label>Author</label>
+      <input type="text" maxlength="49" class="form-control" formControlName="author" required />
+      <!-- <span *ngIf="!formBook.get('password').valid && formBook.get('author').touched">Please enter an author!</span> -->
+    </div>
+
+    <div class="group">
+      <label>Date published</label>
+      <input type="date"  class="form-control" formControlName="published" required />
+      <!-- <span *ngIf="!formBook.get('password').valid && formBook.get('published').touched">Please enter publication's date!</span> -->
+    </div>
+
+    <div class="group">
+      <label>Pages</label>
+      <input type="number"  class="form-control" formControlName="pages" required />
+      <!-- <span *ngIf="!formBook.get('password').valid && formBook.get('pages').touched">Please enter a number of pages</span> -->
+    </div>
+
+    <div class="group">
+      <label>Website</label>
+      <input type="text"  class="form-control" formControlName="website" required />
+      <!-- <span *ngIf="!formBook.get('password').valid && formBook.get('website').touched">Please enter a website!</span> -->
+    </div>
+
+    <div class="group button-container">
+      <button class="btn btn-primary"  (click)="onSave()"  [disabled]="!formBook.valid">Add It</button>
+    </div>
+  </form>
+
+
+

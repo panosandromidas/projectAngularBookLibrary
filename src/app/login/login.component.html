@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="p-2 col-md-12">
+      <div class="instructions">
+        <span>{{instructions.tips}}</span>
+        <div class="tasks">
+          <span>{{instructions.t1}}</span>
+          <br>
+          <span>{{instructions.t2}}</span>
+          <br>
+          <span>{{instructions.t3}}</span>
+        </div>
+        <div class="extras">
+          <span>{{instructions.extra}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cont">
+  <div class="login-container">
+    <form [formGroup]="signupForm">
+      <div class="group">
+        <label>Email</label>
+        <input type="email"  maxlength="49" class="input"  formControlName="email" />
+        <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">Please enter a valid email!</span>
+      </div>
+
+      <div class="group">
+        <label>Password</label>
+        <input type="password" maxlength="49" class="input" formControlName="password" required />
+        <span *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">Please enter a strong password with letters and numbers!</span>
+      </div>
+
+      <div class="group button-container">
+        <button class="btn btn-primary"  (click)="onLogin()"  [disabled]="!signupForm.valid">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
